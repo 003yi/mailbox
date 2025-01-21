@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>suggest</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="style.css" rel="stylesheet" media="all">
+<link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <h1>系物建言信箱</h1>
+</header>
+
+<main id="contents">
+    <p><strong><span class="require">*</span>為必填項目。</strong></p>
+    <form id="entryForm" action="suggestion.php" method="post" enctype="multipart/form-data">
+        <table border="1">
+        <tr>
+            <th>建言者姓名 *</th>
+            <td><input type="text" name="suggester" required></td>
+        </tr>
+        <tr>
+            <th>建言者身分 *</th>
+            <td><input type="radio" name="identity" id="a" value="高中生" required><label for="a">高中生</label>
+            <input type="radio" name="identity" id="b" value="大學部" checked ><label for="b">大學部</label>
+            <input type="radio" name="identity" id="c" value="研究所" ><label for="c">研究所</label>
+            <input type="radio" name="identity" id="d" value="家長" ><label for="d">家長</label>
+            </td>
+        </tr>
+        <tr>
+            <th>建言者信箱 *</th>
+            <td><input type="email" name="email" required ></td>
+        </tr>
+        <tr>
+            <th>建言主題 *</th>
+            <td><input type="text" name="topic" required></td>
+        </tr>
+        <tr>
+            <th>建言類別 *</th>
+            <td><input type="checkbox" name="class[]" id="favo1" value="招生"><label for="favo1">招生</label>
+            <input type="checkbox" name="class[]" id="favo2" value="課程"><label for="favo2">課程</label>
+            <input type="checkbox" name="class[]" id="favo3" value="空間"><label for="favo3">空間</label>
+            <input type="checkbox" name="class[]" id="favo4"value="活動"><label for="favo4">活動</label>
+            <input type="checkbox" name="class[]" id="favo5" value="其他"><label for="favo5">其他</label>
+            </td>
+        </tr>
+        <tr>
+            <th>建言內容 *</th>
+            <td><textarea name="comment" row="4" col="40"></textarea></td>
+        </tr>
+        <tr>
+            <th>附加檔案 *</th>
+            <td><input type="file" name="file" required></td>
+        </tr>
+        </table>
+        <div>
+            <input type="reset" value="清除重填">
+            <input type="submit" value="送出">
+        </div>  
+    </form>
+</main>
+</body>
+</html>
